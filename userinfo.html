@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户信息</title>
+    <script src="js/Bmob-2.2.5.min.js"></script>
+    <script>
+        Bmob.initialize("8dca35e9cb41e91d", "333888");
+        Bmob.debug(true)
+        function getLoginInfo(){
+        //获取用户当前信息
+       let current = Bmob.User.current()
+       var spanTag=document.getElementById("info")
+       spanTag.innerHTML=current.username;
+        }
+    </script>
+</head>
+<body>
+    <span id="info"></span>
+    <button onclick="getLoginInfo()"> 获取登录的用户信息</button>
+</body>
+</html>
