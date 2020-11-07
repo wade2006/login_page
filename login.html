@@ -21,7 +21,7 @@
 			Bmob.User.login(document.getElementById("username").value,document.getElementById("pwd").value).then(res => {
 				location.href="userinfo.html"
 			}).catch(err => {
-				alert(err)
+				alert(err.error)
 			});
 		}
 		function register(){
